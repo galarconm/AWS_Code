@@ -1,0 +1,13 @@
+version: 0.2                    # Versión del formato buildspec de AWS
+phases:
+  install:                      # Fase de instalación
+    runtime-versions:
+      python: 3.11             # Instala Python 3.11
+  build:                       # Fase de construcción
+    commands:
+      - echo "Ejecutando build..."
+      - python app.py  
+      - cat index.html        # Ejecuta tu aplicación Python
+#artifacts:                     # Qué archivos conservar después del build
+#  files:
+#    - '**/*'                   # Conserva todos los archivos
